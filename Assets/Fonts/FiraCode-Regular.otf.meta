@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: c9b65a07ddddd47b6b8944a5179a85ef
+timeCreated: 1506681721
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Fira Code
+  fontNames:
+  - Fira Code
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6891d5c65de864e69bef526d005950ae, type: 3}
+  - {fileID: 12800000, guid: 1947e849b9fdd4fde9efb756c50d85f2, type: 3}
+  - {fileID: 12800000, guid: 6038433c5e7544d309b33858f6db5e27, type: 3}
+  - {fileID: 12800000, guid: 7f2ce9af51870499dbde62cab286b1a4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
