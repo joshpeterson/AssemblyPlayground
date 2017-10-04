@@ -1,0 +1,3 @@
+<linker>
+  <assembly fullname="Mos6510" preserve="all"/>
+</linker>
