@@ -1555,7 +1555,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u25CF\n\n\u279C"
+  m_Text: "\u25CF"
 --- !u!222 &927771678
 CanvasRenderer:
   m_ObjectHideFlags: 0
