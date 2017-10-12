@@ -15,6 +15,7 @@ public class MemoryView : MonoBehaviour
 
   void Update()
   {
-    GetComponent<Text>().text = MemoryFormatter.Display(memory);
+    var textComponent = GetComponent<Text>();
+    textComponent.text = MemoryFormatter.Display(memory, 0, textComponent.cachedTextGenerator.lineCount);
   }
 }

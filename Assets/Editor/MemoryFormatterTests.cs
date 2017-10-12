@@ -8,7 +8,7 @@ public class MemoryFormatterTests
   {
     var memory = new Memory();
     memory.SetValue(0x0000, 0x42);
-    Assert.That(MemoryFormatter.Display(memory), Does.StartWith("0x0000:0x0003 - 0x42 0x00 0x00 0x00"));
+    Assert.That(MemoryFormatter.Display(memory, 0x0000, 1), Is.EqualTo("0x0000:0x0003 - 0x42 0x00 0x00 0x00\n"));
   }
   
   [Test]
@@ -20,8 +20,8 @@ public class MemoryFormatterTests
 
     var expected = string.Join("\n",
       "0x0000:0x0003 - 0x42 0x52 0x62 0x72",
-      "0x0004:0x0007 - 0x82 0x92 0xA2 0xB2");
+      "0x0004:0x0007 - 0x82 0x92 0xA2 0xB2\n");
     
-    Assert.That(MemoryFormatter.Display(memory), Does.StartWith(expected));
+    Assert.That(MemoryFormatter.Display(memory, 0x0000, 2), Is.EqualTo(expected));
   }
 }
