@@ -2,7 +2,13 @@
 
 public class BackForwardStackerTests
 {
-  readonly BackForwardStacker<int> _stacker = new BackForwardStacker<int>();
+  private BackForwardStacker<int> _stacker;
+
+  [SetUp]
+  public void SetUp()
+  {
+    _stacker = new BackForwardStacker<int>();
+  }
 
   [Test]
   public void CanGoBackIsFalseByDefault()
