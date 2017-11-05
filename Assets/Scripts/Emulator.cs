@@ -11,7 +11,7 @@ public class Emulator : MonoBehaviour
   
   public Repl repl;
 
-  private void Awake()
+  public void Awake()
   {
     model = new ProgrammingModel();
     memory = new Memory();

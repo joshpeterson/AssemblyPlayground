@@ -24,4 +24,17 @@ public class MemoryFormatterTests
     
     Assert.That(MemoryFormatter.Display(memory, 0x0000, 2), Is.EqualTo(expected));
   }
+
+  [Test]
+  public void AdjustsStartAddressSoDisplayDoesNotOverflow()
+  {
+    var memory = new Memory();
+    memory.SetValue(0xFFF7, 0x42);
+
+    var expected = string.Join("\n",
+      "0xFFF7:0xFFFA - 0x42 0x00 0x00 0x00",
+      "0xFFFB:0xFFFE - 0x00 0x00 0x00 0x00\n");
+
+    Assert.That(MemoryFormatter.Display(memory, 0xFFFE, 2), Is.EqualTo(expected));
+  }
 }
