@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.TestTools;
 using UnityEngine.UI;
 
 public class MemoryViewTests
 {
-  private MemoryView _memoryView;
   private Text _addressTextComponent;
+  private MemoryView _memoryView;
 
   [SetUp]
   public void SetUp()
@@ -15,21 +13,21 @@ public class MemoryViewTests
     var manager = new GameObject();
     var emulator = manager.AddComponent<Emulator>();
     emulator.Awake();
-    
+
     var address = new GameObject();
     _addressTextComponent = address.AddComponent<Text>();
 
     var memoryTextGameObject = new GameObject();
     var text = memoryTextGameObject.AddComponent<Text>();
     var memoryView = memoryTextGameObject.AddComponent<MemoryView>();
-    
+
     _memoryView = memoryView;
     _memoryView.manager = manager;
     _memoryView.address = address;
 
     _memoryView.Start();
   }
-  
+
   [TestCase("0006", "0x0006")]
   [TestCase("0010", "0x0010")]
   [TestCase("0x0010", "0x0010")]

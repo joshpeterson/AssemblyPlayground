@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NUnit.Framework.Constraints;
 
 public class BackForwardStacker<T>
 {
@@ -13,13 +12,13 @@ public class BackForwardStacker<T>
     _forwardStack.Push(value);
     return value;
   }
-  
+
   public T PopForward()
   {
     var value = _forwardStack.Pop();
     return value;
   }
-  
+
   public void PushBack(T value)
   {
     _backStack.Push(value);

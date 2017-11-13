@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Mos6510;
+﻿using Mos6510;
 using UnityEngine;
 
 public class Emulator : MonoBehaviour
 {
+  public Memory memory;
   public ProgrammingModel model;
 
-  public Memory memory;
-  
   public Repl repl;
 
   public void Awake()

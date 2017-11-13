@@ -1,13 +1,12 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using Mos6510;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MemoryView : MonoBehaviour
 {
-  public GameObject manager;
   public GameObject address;
+  public GameObject manager;
 
   private Memory memory;
 
@@ -16,7 +15,7 @@ public class MemoryView : MonoBehaviour
     memory = manager.GetComponent<Emulator>().memory;
   }
 
-  void Update()
+  private void Update()
   {
     var textComponent = GetComponent<Text>();
     string newValue;
@@ -30,13 +29,11 @@ public class MemoryView : MonoBehaviour
     var addressTextComponent = address.GetComponent<Text>();
     int parsedAddress;
     if (TryParseAddressInput(addressTextComponent.text, out parsedAddress))
-    {
       if (parsedAddress < 0xFFFF)
       {
         formatted = MemoryFormatter.Display(memory, parsedAddress, numberOfRows);
         return true;
       }
-    }
 
     return false;
   }
